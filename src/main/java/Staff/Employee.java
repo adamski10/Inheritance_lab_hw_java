@@ -25,7 +25,10 @@ public abstract class Employee {
     }
 
     public void raiseSalary(double raiseAmount){
-        this.salary += raiseAmount;
+        if(raiseAmount > 0)
+            this.salary += raiseAmount;
+        else
+            System.out.println("Negative number not accepted");
     }
 
     public double payBonus(double salary){
